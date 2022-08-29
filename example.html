@@ -8,13 +8,13 @@
 	</head>
 	<body>
     <noscript>
-      <!-- bibtex source hidden by default, show it if JS disabled -->
+      <!-- bibtex source hidden by default, show it if JS disabled style="display:none;"-->
       <style>
       #bibtex { display: block;}
       </style>
     </noscript>
 		<table id="pubTable" class="display"></table>
-        <pre id="bibtex" style="display:none;">
+        <pre id="bibtex">
 @InProceedings{Karavirta:APlus,
   author = {Ville Karavirta and Petri Ihantola and Teemu Koskinen},
   title = {Service-Oriented Approach to Improve Interoperability of e-Learning Systems},
@@ -630,7 +630,7 @@ keywords = {Xaal}
 		<script type="text/javascript" src="build/bib-list.js"></script>
 		<script type="text/javascript">
 		    $(document).ready(function() {
-        	bibtexify("#bibtex", "pubTable", {'tweet': 'vkaravir'});
+        	bibtexify("#bibtex", "pubTable");
     		});
 		</script>
 	</body>
