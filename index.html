@@ -317,12 +317,6 @@
           <h2>Publications</h2>
         </div>
 
-        <noscript>
-          <!-- bibtex source hidden by default, show it if JS disabled -->
-          <style>
-          #bibtex { display: block;}
-          </style>
-        </noscript>
         <table id="pubTable" class="display"></table>
         <pre id="bibtex" style="display:none;">
           @InProceedings{Karavirta:APlus,
@@ -333,13 +327,6 @@
             pages = {5}
           }
         </pre>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script type="text/javascript" src="build/bib-list.js"></script>
-        <script type="text/javascript">
-          $(document).ready(function() {
-            bibtexify("#bibtex", "pubTable", {'tweet': 'vkaravir'});
-          });
-        </script>
 
       </div>
     </section><!-- End Testimonials Section -->
@@ -447,6 +434,21 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Publications Section JS File -->
+  <noscript>
+    <!-- bibtex source hidden by default, show it if JS disabled -->
+    <style>
+    #bibtex { display: block;}
+    </style>
+  </noscript>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="build/bib-list.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    bibtexify("#bibtex", "pubTable", {'tweet': 'vkaravir'});
+    });
+  </script>
 
 </body>
 
