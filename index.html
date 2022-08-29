@@ -28,7 +28,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Publication CSS File-->
-  <link href="assets/css/bib-publication-list.css" rel="stylesheet">
+  <link href="assets/css/bib-publication-list.css" rel="stylesheet" type="text/css">
 
   <!-- =======================================================
   * Template Name: iPortfolio - v3.8.1
@@ -316,6 +316,30 @@
         <div class="section-title">
           <h2>Publications</h2>
         </div>
+
+        <noscript>
+          <!-- bibtex source hidden by default, show it if JS disabled -->
+          <style>
+          #bibtex { display: block;}
+          </style>
+        </noscript>
+        <table id="pubTable" class="display"></table>
+        <pre id="bibtex" style="display:none;">
+          @InProceedings{Karavirta:APlus,
+            author = {Ville Karavirta and Petri Ihantola and Teemu Koskinen},
+            title = {Service-Oriented Approach to Improve Interoperability of e-Learning Systems},
+            booktitle = {13th IEEE International Conference on Advanced Learning Technologies},
+            year = {To Appear},
+            pages = {5}
+          }
+        </pre>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="build/bib-list.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            bibtexify("#bibtex", "pubTable", {'tweet': 'vkaravir'});
+          });
+        </script>
 
       </div>
     </section><!-- End Testimonials Section -->
